@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pruebaMongo:war">
+    <output-path>$PROJECT_DIR$/pruebaMongo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pruebaMongo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pruebaMongo-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pruebaMongo:war exploded" />
+    </root>
+  </artifact>
+</component>
