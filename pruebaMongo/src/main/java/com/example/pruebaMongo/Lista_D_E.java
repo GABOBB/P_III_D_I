@@ -62,6 +62,8 @@ public class Lista_D_E {
         }
         this.size++;
     }
+
+    public Nodo_D_E getHead(){return this.head;}
 }
 /*
    \/
