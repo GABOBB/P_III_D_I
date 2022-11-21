@@ -6,6 +6,7 @@ public class Nodo_D_E {
     private String _id;
     private Lista_D_E data1;
     private int w;
+    private boolean conected;
     private Nodo_D_E _N;
     private Nodo_D_E _P;
 

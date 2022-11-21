@@ -16,6 +16,11 @@ public class Lista_D_E {
         this.last = null;
         this.size = 0;
     }
+    public Lista_D_E (){
+        this.head = null;
+        this.last = null;
+        this.size = 0;
+    }
 
     public Nodo_D_E busca_P(String id){
         Nodo_D_E act = this.head;
