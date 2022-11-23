@@ -15,8 +15,16 @@ public class Graph {
         Nodo_D_E auxN = this.m_r.getHead();
         while(auxN != null){
             if(!auxN.get_id().equals(N_id)) {
-                Nodo_D_E _nn = new Nodo_D_E(N_id, random_int(10));
+                int x;
+                if(random_t_f()){
+                    x = random_int(11) - 1;
+                }else{
+                    x = 0;
+                }
+                Nodo_D_E _nn = new Nodo_D_E(N_id,x);
+                Nodo_D_E _NN = new Nodo_D_E(auxN.get_id(),x);
                 auxN.getData1().add_L(_nn);
+                new_Node.getData1().add_L(_NN);
                 auxN = auxN.get_N();
             }else{
                 Nodo_D_E _nn = new Nodo_D_E(N_id,0);
@@ -24,6 +32,8 @@ public class Graph {
                 auxN = auxN.get_N();
             }
         }
+
+
     }
 
     public static int random_int(int limit){return (int) (Math.random() * limit);}
