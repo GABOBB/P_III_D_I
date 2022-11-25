@@ -1,14 +1,18 @@
 
+import { Fragment } from 'react';
 import './App.css';
-import Appbar from './components/Appbar';
-import MatrixVector from "./components/MatrixVector";
+import Bar from './components/bar/Bar';
+import MatrixVector from './components/MatrixVector';
+
+
 
 function App() {
   return (
-    <div className="App">
-    <Appbar/>
-    <MatrixVector/>
-    </div>
+    <Fragment>
+      
+      <Bar/>
+      <MatrixVector/>
+    </Fragment>
   );
 }
 
