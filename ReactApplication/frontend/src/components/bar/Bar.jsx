@@ -13,7 +13,7 @@ export default function Bar() {
                             <ChatIcon fontSize={'large'}/>
                         </Box>
                         <Typography variant="h6">
-                            React Chat App
+                            Proyecto III Algoritmos y estructuras de Datos I
                         </Typography>
                     </Toolbar>
                 </AppBar>

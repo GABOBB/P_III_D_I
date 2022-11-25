@@ -2,7 +2,7 @@ package com.example.pruebaMongo.model;
 
 import org.springframework.data.annotation.Id;
 
-public class Avenger {
+public class MatrixIns {
     @Id
     private Long id;
 
@@ -11,10 +11,10 @@ public class Avenger {
     private String movie;
     private Integer age;
 
-    public Avenger() {
+    public MatrixIns() {
     }
 
-    public Avenger(Long id, String name, String superheroName, String movie, Integer age) {
+    public MatrixIns(Long id, String name, String superheroName, String movie, Integer age) {
         this.id = id;
         this.name = name;
         this.superheroName = superheroName;

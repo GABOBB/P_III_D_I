@@ -1,13 +1,17 @@
+
 import { Fragment } from 'react';
 import './App.css';
 import Bar from './components/bar/Bar';
-import Chat from './components/chat/Chat';
+import MatrixVector from './components/MatrixVector';
+
+
 
 function App() {
   return (
     <Fragment>
-      <Bar />
-      <Chat />
+      
+      <Bar/>
+      <MatrixVector/>
     </Fragment>
   );
 }
