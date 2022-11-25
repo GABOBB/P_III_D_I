@@ -5,7 +5,6 @@ package com.example.pruebaMongo;
 public class Graph {
     public static Lista_D_E m_r;
     public static int [][] mat=null;
-
     public Graph(){
         this.m_r = new Lista_D_E();
     }
@@ -13,22 +12,22 @@ public class Graph {
         int x=0;
         boolean ban=true;
         while(ban){
-            x=random_int(8);
+            x=random_int(4);
             if(x>1) ban=false;
         }
         mat=new int[x][x];
-
         for (int i=0; i<x; i++) {
             Lista_D_E auxiliarList= new Lista_D_E();
+            int random1= random_int(x);
             for (int j = 0; j < x; j++) {
                 mat[i][j] = 0;
                 int random= random_int(2);
-                int random1= random_int(x+1);
+
                 System.out.println(random1);
 
                 while(random1==i && j==0){
-                    random1=random_int(x);} System.out.println(random1);
-                if(random1==x) random1--;
+                    random1=random_int(x);} System.out.println(random1+ " "+ j);
+
 
                 if(j==random1)  random=1;
                 if (random == 1 && i!=j) {
@@ -80,6 +79,6 @@ public class Graph {
         n.show();
         n.showList();
         ShortestWay n1= new ShortestWay();
-        //n1.buildMatrix(1, 5);
+        n1.buildMatrix(1);
     }
 }

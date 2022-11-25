@@ -60,13 +60,3 @@ public class Lista_D_E {
     public int getSize(){return size;}
 
 }
-/*
-   \/
-   /\
-  /  \
-\/[][]\/
-/\[][]/\
-  \  /
-   \/
-   /\
- */
