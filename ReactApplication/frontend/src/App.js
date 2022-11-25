@@ -1,14 +1,20 @@
 
+import React from 'react';
 import './App.css';
 import Appbar from './components/Appbar';
-import MatrixVector from "./components/MatrixVector";
+
+
+import {Fragment} from 'react';
+import MVector from './components/chat/MVector';
 
 function App() {
   return (
-    <div className="App">
-    <Appbar/>
-    <MatrixVector/>
-    </div>
+    <Fragment>
+        <Appbar/>
+        <MVector/>
+        
+        
+    </Fragment>
   );
 }
 
