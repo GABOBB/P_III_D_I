@@ -8,63 +8,64 @@ public class Graph {
     public Graph(){
         this.m_r = new Lista_D_E();
     }
-    public void addNodes(){
-        int x=0;
-        boolean ban=true;
-        while(ban){
-            x=random_int(4);
-            if(x>1) ban=false;
+    public void addNodes() {
+        int x = 0;
+        boolean ban = true;
+        while (ban) {
+            x = random_int(4);
+            if (x > 1) ban = false;
         }
-        mat=new int[x][x];
-        for (int i=0; i<x; i++) {
-            Lista_D_E auxiliarList= new Lista_D_E();
-            int random1= random_int(x);
+        mat = new int[x][x];
+        for (int i = 0; i < x; i++) {
+            Lista_D_E auxiliarList = new Lista_D_E();
+            int random1 = random_int(x);
             for (int j = 0; j < x; j++) {
                 mat[i][j] = 0;
-                int random= random_int(2);
+                int random = random_int(2);
 
                 System.out.println(random1);
 
-                while(random1==i && j==0){
-                    random1=random_int(x);} System.out.println(random1+ " "+ j);
-
-
-                if(j==random1)  random=1;
-                if (random == 1 && i!=j) {
-                    mat[i][j] = random_int(9)+1;
-                    auxiliarList.addNode(j+1, mat[i][j]);
+                while (random1 == i && j == 0) {
+                    random1 = random_int(x);
                 }
+                System.out.println(random1 + " " + j);
 
-<<<<<<< HEAD
-    public void add_node(String N_id){
-        Nodo_D_E new_Node = new Nodo_D_E(N_id,true);
+
+                if (j == random1) random = 1;
+                if (random == 1 && i != j) {
+                    mat[i][j] = random_int(9) + 1;
+                    auxiliarList.addNode(j + 1, mat[i][j]);
+                }
+            }
+        }
+    }
+
+    public void add_node(String N_id) {
+        Nodo_D_E new_Node = new Nodo_D_E(N_id, true);
         this.m_r.add_F(new_Node);
         Nodo_D_E auxN = this.m_r.getHead();
-        while(auxN != null){
-            if(!auxN.get_id().equals(N_id)) {
+        while (auxN != null) {
+            if (!auxN.get_id().equals(N_id)) {
                 int x;
-                if(random_t_f()){
+                if (random_t_f()) {
                     x = random_int(11) - 1;
-                }else{
+                } else {
                     x = 0;
                 }
-                Nodo_D_E _nn = new Nodo_D_E(N_id,x);
-                Nodo_D_E _NN = new Nodo_D_E(auxN.get_id(),x);
+                Nodo_D_E _nn = new Nodo_D_E(N_id, x);
+                Nodo_D_E _NN = new Nodo_D_E(auxN.get_id(), x);
                 auxN.getData1().add_L(_nn);
                 new_Node.getData1().add_L(_NN);
                 auxN = auxN.get_N();
-            }else{
-                Nodo_D_E _nn = new Nodo_D_E(N_id,0);
+            } else {
+                Nodo_D_E _nn = new Nodo_D_E(N_id, 0);
                 auxN.getData1().add_L(_nn);
                 auxN = auxN.get_N();
-=======
->>>>>>> isaac
             }
-            Nodo_D_E auxiliarNode= new Nodo_D_E(i+1, 0);
+            Nodo_D_E auxiliarNode = new Nodo_D_E(i + 1, 0);
             auxiliarNode.setData1(auxiliarList);
             m_r.addNode(auxiliarNode);
         }
-
     }
     public void show(){
 

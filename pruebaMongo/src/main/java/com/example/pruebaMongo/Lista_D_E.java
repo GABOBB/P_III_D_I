@@ -1,7 +1,7 @@
 package com.example.pruebaMongo;
 
 /**
- * authon: B.B.G.
+ * Esta clase permite instanciar listas
  */
 
 public class Lista_D_E {
@@ -10,6 +10,11 @@ public class Lista_D_E {
     private Nodo_D_E last=null;
     private int size=0;
 
+    /**
+     * Este método genera todos los nodos de uno de los mapas de centros de envío
+     * @param id parámetro para identificar cada uno de los centros de envío
+     * @param w representa el peso de cada una de las aristas entre los nodos que están conectados
+     */
     public void addNode(int id, int w){
         Nodo_D_E newNode= new Nodo_D_E(id, w);
         if(head==null) head=newNode;
@@ -22,6 +27,11 @@ public class Lista_D_E {
             aux.set_N(newNode);
         }
     }
+
+    /**
+     * Se encarga de crear nodos
+     * @param node
+     */
     public void addNode(Nodo_D_E node){
         if(head==null) head=node;
         else{
@@ -33,6 +43,10 @@ public class Lista_D_E {
             size++;
         }
     }
+
+    /**
+     * Este método se encarga de mostrar los pesos de cada una de las aristas
+     */
     public void show(){
         Nodo_D_E aux= head;
         while(aux!=null){
@@ -40,6 +54,10 @@ public class Lista_D_E {
             aux=aux.get_N();
         }
     }
+
+    /**
+     * Método que permite mostrar el id de cada uno de los nodos
+     */
     public void showId(){
         Nodo_D_E aux= head;
         while(aux!=null){
@@ -48,6 +66,12 @@ public class Lista_D_E {
         }
 
     }
+
+    /**
+     * Revisa si el nodo no ha sido analizado a la hora de aplicar el algoritmo de recorrido Dijkstra.
+     * @param id
+     * @return
+     */
     public boolean validation(int id){
         Nodo_D_E aux=head;
         while(aux!=null){
@@ -56,7 +80,17 @@ public class Lista_D_E {
         }
         return true;
     }
+
+    /**
+     * Obtienen el head de una lista
+     * @return
+     */
     public Nodo_D_E getHead(){return this.head;}
+
+    /**
+     * Da el tamaño de la lista
+     * @return
+     */
     public int getSize(){return size;}
 
 }
