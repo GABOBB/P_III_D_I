@@ -10,4 +10,5 @@ public class PruebaMongoApplication {
 		SpringApplication.run(PruebaMongoApplication.class, args);
 	}
 
+
 }
